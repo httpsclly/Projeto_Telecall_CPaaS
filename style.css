@@ -1,0 +1,78 @@
+body{
+    /* test*/
+    background-color: rgb(165, 65, 165);
+    
+}
+  
+.logo {
+    
+    text-align: center;
+}
+.menu {
+    width: 100%;
+}
+
+.menu ul {
+    font-size: 15px; 
+    text-align:center;
+    background-color: brown; 
+}
+.menu ul li {
+    font-family: "Poppins", sans-serif;
+    display: inline;
+    padding: 2%;
+   
+}
+.menu ul li a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+   
+    
+}
+.menu ul li a:hover {
+color: #092256;
+}
+#area{
+    color:white;
+}
+#area:hover{
+    color: #092256;
+}
+
+
+/*corpo*/
+.solucoes h2{
+    text-align: center;
+    margin-top: 4%;
+    font-family: 'Poppins';
+ 
+ 
+    
+}
+#especialidades{
+    margin-top: 5%;
+    background-color: #f7f7f8;
+    
+    
+}
+    
+/*card*/
+.team-area{
+    display: inline;
+}
+.card-body{
+    text-align: center;
+    
+}
+  .main-title{
+    text-align: center;
+    font-family: 'Poppins';
+  }
+
+
+  #sobre{
+   
+    font-size: 30px;
+    padding: 2%;
+  }
