@@ -7,55 +7,62 @@
     <title>Área do cliente - Telecall </title>
     <link rel="shortcut icon" href="img/logo-vermelha.png">
     <link rel="stylesheet" type="text/css" href="style-cadas.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <div class="container">
-        <div class="form-image">
-            <img src="img/undraw_my_password_re_ydq7.svg" alt="">
-        </div>
-        <div class="login">
-            <form action="#">
-                <div class="titulo-login">
-                    <h1>Cadastre-se</h1>
-                </div>
-                <div class="login-button">
-                    <button><a href="#">Entrar</a></button>
+   <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <h1>Login</h1>
+            </div>
+
+            <div id="social_midia">
+                <a href="#">
+                    <img src="img/icons8-facebook-novo-48.png" alt="Facebook">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons8-google-logo-48.png" alt="Google">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons8-linkedin-48.png" alt="Linkedin">
+                </a>
+            </div>
+
+            <div id="input">
+                <div class="input-box">
+                    <label for="CPF ou CNPJ">
+                        CPF ou CNPJ
+                        <div class="input-campo">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="CPF ou CNPJ" name="CPF ou CNPJ" required>
+                        </div>
+                    </label>
                 </div>
 
-                <div class="input-cadastro">
-                    <label for="user">Primeiro Nome</label>
-                    <input type="text" id="user" name="user" placeholder="Digite seu primeiro nome" required>
-                </div>
-                
-                <div class="input-cadastro">
-                    <label for="user-sobrenome">Sobrenome</label>
-                    <input type="text" id="user-sobrenome" name="user-sobrenome" placeholder="Digite seu sobrenome" required>
-                </div>
-
-                <div class="input-cadastro">
-                    <label for="user-email">Email</label>
-                    <input type="email" id="user-email" name="user-email" placeholder="Digite seu email" required>
+                <div class="input-box">
+                    <label for="Senha">
+                        Senha
+                        <div class="input-campo">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="Senha" name="Senha" required>
+                        </div>
+                    </label>
                 </div>
 
-                <div class="input-cadastro">
-                    <label for="user-celular">Celular</label>
-                    <input type="tel" id="user-celular" name="user-celular" placeholder="(xx) xxxx-xxxx" required>
+                <div id="esqueceu-senha">
+                    <a href="#">
+                        Esqueceu sua senha?
+                    </a>
                 </div>
+            </div>
 
-                <div class="input-cadastro">
-                    <label for="user-senha">Senha</label>
-                    <input type="password" id="user-senha" name="user-senha" placeholder="Digite sua senha" required>
-                </div>
-
-                <div class="input-cadastro">
-                    <label for="user-senha2">Confirme sua senha</label>
-                    <input type="password" id="user-senha2" name="user-senha2" placeholder="Digite sua senha" required>
-                </div>
-
-            </form>
-        </div>
-    </div>
-    
+            <button type="submit" id="login_button">
+                Login
+            </button>
+        </form>
+   </main>
 </body>
 </html>
