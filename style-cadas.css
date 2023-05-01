@@ -13,4 +13,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;   
+    background: radial-gradient(circle, rgba(227,99,99,1) 0%, rgba(255,196,164,1) 100%);
+
+}
+
+/*parte de cima do card*/ 
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(255, 255, 255);
+}
+
+/*parte da foto do lado*/ 
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background-color: #ffd3bc;
+}
+
+/*parte para mexer na foto*/ 
+.form-image img{
+    width: 31rem;
+}
+
+/*parte aonde tem os input*/ 
+.login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffd3bc;
+    padding: 3rem;
+}
+
+/*parte cadastre-se do input*/ 
+.titulo-login{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*parte do botão entre*/ 
+.login-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-button button{
+    border: none;
+    background-color: rgb(226, 155, 137);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #a52a2a;
 }
