@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
     padding: 1%;
     background-color: #ffd3bc;
 }
@@ -75,4 +76,18 @@ body {
 
 .login-button button:hover {
     background-color: #a52a2a;
+}
+
+.login-button button a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.input-cadastro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    
+    
 }
