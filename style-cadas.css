@@ -40,6 +40,7 @@
     position: relative;
 }
 
+
 /*parte da img da redes sociais*/
 #social_midia{
     display: flex;
@@ -102,6 +103,18 @@
     text-decoration: none;
 }
 
+/*botão do cadastre-se*/
+#criar_uma_conta{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+#criar_uma_conta a{
+    text-decoration: none;
+}
+
 /*button "enviar"*/
 
 #login_button{
@@ -116,6 +129,7 @@
 
 #login_button:active{
     background-color: rgb(226, 226, 226);
+    background-color: rgb(214, 213, 213);
     transform: scale(1.1);
     transition: all 0.5s;
 }

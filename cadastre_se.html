@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do cliente - Telecall </title>
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <link rel="stylesheet" type="text/css" href="style-cadastre_se.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <a href="cadastro.html">
+                <i class="fa-solid fa-arrow-left">   
+                </i>
+                </a>
+                <h1>Cadastre-se</h1>
+            </div> 
+
+            <div id="input">
+                <div class="input-box">
+                    <label for="Nome">
+                        Nome
+                        <div class="input-campo">
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                    </label>
+
+                </div>
+                <div id="input">
+                    <div class="input-box">
+                        <label for="Sobrenome">
+                            Sobrenome
+                            <div class="input-campo">
+                                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu Sobrenome" required>
+                            </div>
+                        </label>
+                    </div>
+
+            <div id="input">
+                <div class="input-box">
+                    <label for="CPF ou CNPJ">
+                        CPF ou CNPJ
+                        <div class="input-campo">
+                            <input type="text" id="CPF ou CNPJ" name="CPF ou CNPJ" placeholder="Digite seu CPF ou CNPJ" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="input">
+                    <div class="input-box">
+                        <label for="Celular">
+                            Celular
+                            <div class="input-campo">
+                                <input type="tel" id="celular" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                            </div>
+                        </label>
+                    </div>
+
+                <div class="input-box">
+                    <label for="Senha">
+                        Senha
+                        <div class="input-campo">
+                            <input type="password" id="Senha" name="Senha" placeholder="Digite uma senha" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirme_senha">
+                        Confirme sua senha
+                        <div class="input-campo">
+                            <input type="password" id="confirme_senha" name="confirme_senha" placeholder="Confirme sua senha" required>
+                        </div>
+                    </label>
+
+
+                </div>
+            </div>
+
+            <button type="submit" id="login_button">
+                Login
+            </button>
+        </form>
+   </main>
+</body>
+</html>
