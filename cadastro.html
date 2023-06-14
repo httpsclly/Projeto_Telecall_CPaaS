@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Área do cliente - Telecall </title>
-    <link rel="shortcut icon" href="img/logo-vermelha.png">
-    <link rel="stylesheet" type="text/css" href="style-cadas.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <link rel="stylesheet" href="style-cadas.css" />
 
-</head>
-<body>
-   <main id="container">
-        <form id="login_form">
-            <div id="form_header">
-                <h1>Login</h1>
-                <a href="index.html">
-                    <i class="fa-solid fa-arrow-left">   
-                </i>
-                </a>    
-            </div>
-            
+  </head>
 
-            <div id="social_midia">
-                <a href="https://pt-br.facebook.com/login/device-based/regular/login/">
-                    <img src="img/icons8-facebook-novo-48.png" alt="Facebook">
-                </a>
 
-                <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">
-                    <img src="img/icons8-google-logo-48.png" alt="Google">
-                </a>
+  <body>
+    <div class="container">
+      <div class="card">
+        <i class="fa-solid fa-arrow-left"></i>
+        <h1>Entrar</h1>
 
-                <a href="https://www.linkedin.com/login/pt">
-                    <img src="img/icons8-linkedin-48.png" alt="Linkedin">
-                </a>
-            </div>
+        <div id="msgError"></div>
 
-            <div id="input">
-                <div class="input-box">
-                    <label for="CPF ou CNPJ">
-                        CPF ou CNPJ
-                        <div class="input-campo">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="CPF ou CNPJ" name="CPF ou CNPJ" required>
-                        </div>
-                    </label>
-                </div>
+        <div class="label-float">
+          <input type="text" id="usuario" paceholder="" required />
+          <label id="userLabel" for="usuario">Usuario</label>
+        </div>
 
-                <div class="input-box">
-                    <label for="Senha">
-                        Senha
-                        <div class="input-campo">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="Senha" name="Senha" required>
-                        </div>
-                    </label>
-                </div>
+        <div class="label-float">
+          <input type="password" id="senha" paceholder="" required />
+          <label id="senhaLabel" for="senha">Senha</label>
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </div>
 
-                <div id="esqueceu-senha">
-                    <a href="#">
-                        Esqueceu sua senha?
-                    </a>
-                </div>
-                <div id="criar_uma_conta">
-                    <p>Não tem uma conta? <a href="cadastre_se.html">
-                        Cadastre-se
-                    </a></p>
-                
-                </div>
-            </div>
+        <div class="justify-center">
+          <button onclick="entrar()">Entrar</button>
+        </div>
 
-            <button type="submit" id="login_button">
-                Login
-            </button>
-        </form>
-   </main>
-</body>
+        <div class="justify-center">
+          <hr />
+        </div>
+
+        <p>
+          Não tem uma conta?
+          <a href="cadastre_se.html">
+            Cadastre-se
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <script src="signin.js"></script>
+  </body>
 </html>

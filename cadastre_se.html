@@ -1,92 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área do cliente - Telecall </title>
-    <link rel="shortcut icon" href="img/logo-vermelha.png">
-    <link rel="stylesheet" type="text/css" href="style-cadastre_se.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style-cadastre_se.css"/>
+    
 
-</head>
-<body>
-   <main id="container">
-        <form id="login_form">
-            <div id="form_header">
-                <a href="cadastro.html">
-                <i class="fa-solid fa-arrow-left">   
-                </i>
-                </a>
-                <h1>Cadastre-se</h1>
-            </div> 
-            
+    <title>Singup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Cadastrar</h1>
+        <p>Para ser cliente é necessário preencher  corretamente o formulário abaixo. <br> Os campos com * são de preenchimento <strong>obrigatório.</strong></p>
+        <hr>
 
-            <div id="input">
-                <div class="input-box">
-                    <label for="Nome">
-                        Nome
-                        <div class="input-campo">
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                        </div>
-                    </label>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
 
-                </div>
-                <div id="input">
-                    <div class="input-box">
-                        <label for="Sobrenome">
-                            Sobrenome
-                            <div class="input-campo">
-                                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu Sobrenome" required>
-                            </div>
-                        </label>
-                    </div>
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome</label>
+        </div>
 
-            <div id="input">
-                <div class="input-box">
-                    <label for="CPF ou CNPJ">
-                        CPF ou CNPJ
-                        <div class="input-campo">
-                            <input type="text" id="CPF ou CNPJ" name="CPF ou CNPJ" placeholder="Digite seu CPF ou CNPJ" required>
-                        </div>
-                    </label>
-                </div>
+        <div class="label-float">
+          <input type="text" id="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
 
-                <div id="input">
-                    <div class="input-box">
-                        <label for="Celular">
-                            Celular
-                            <div class="input-campo">
-                                <input type="tel" id="celular" name="celular" placeholder="(xx) xxxx-xxxx" required>
-                            </div>
-                        </label>
-                    </div>
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Senha</label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
 
-                <div class="input-box">
-                    <label for="Senha">
-                        Senha
-                        <div class="input-campo">
-                            <input type="password" id="Senha" name="Senha" placeholder="Digite uma senha" required>
-                        </div>
-                    </label>
-                </div>
+        <div class="label-float">
+          <input type="password" id="confirmSenha" placeholder=" " required />
+          <label id="labelConfirmSenha" for="confirmSenha"
+            >Confirmar Senha</label
+          >
+          <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
 
-                <div class="input-box">
-                    <label for="confirme_senha">
-                        Confirme sua senha
-                        <div class="input-campo">
-                            <input type="password" id="confirme_senha" name="confirme_senha" placeholder="Confirme sua senha" required>
-                        </div>
-                    </label>
+        <div class="justify-center">
+          <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
 
-
-                </div>
-            </div>
-
-            <button type="submit" id="login_button">
-                Login
-            </button>
-        </form>
-   </main>
-</body>
+    <script src="signup.js"></script>
+  </body>
 </html>
