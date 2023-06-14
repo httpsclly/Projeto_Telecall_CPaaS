@@ -11,13 +11,9 @@
 i {
     color: black;
 }
+
 body{
-  background-image: linear-gradient(113.3deg, rgba(217, 9, 27, 1) 6.9%, rgba(22, 68, 150, 1) 75%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  background-image: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
 }
 
 .container {
@@ -149,3 +145,4 @@ a:hover{
   border-radius: 4px;
   display: none;
 }
+

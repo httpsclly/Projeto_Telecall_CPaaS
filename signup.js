@@ -22,7 +22,7 @@ let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
 nome.addEventListener('keyup', () => {
-  if(nome.value.length <= 2){
+  if(nome.value.length <= 1){
     labelNome.setAttribute('style', 'color: red')
     labelNome.innerHTML = 'Nome *Insira no minimo 15 caracteres'
     nome.setAttribute('style', 'border-color: red')
@@ -36,9 +36,9 @@ nome.addEventListener('keyup', () => {
 })
 
 usuario.addEventListener('keyup', () => {
-  if(usuario.value.length <= 4){
+  if(usuario.value.length <= 7){
     labelUsuario.setAttribute('style', 'color: red')
-    labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
+    labelUsuario.innerHTML = 'Usuário *Insira no minimo 6 caracteres'
     usuario.setAttribute('style', 'border-color: red')
     validUsuario = false
   } else {
@@ -50,9 +50,9 @@ usuario.addEventListener('keyup', () => {
 })
 
 senha.addEventListener('keyup', () => {
-  if(senha.value.length <= 5){
+  if(senha.value.length <= 9){
     labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
+    labelSenha.innerHTML = 'Senha *Insira no minimo 8 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {
@@ -129,3 +129,81 @@ btnConfirm.addEventListener('click', ()=>{
     inputConfirmSenha.setAttribute('type', 'password')
   }
 })
+
+
+// CPF//
+
+function validarCPF() {
+  var cpfInput = document.getElementById('cpf');
+  var cpf = cpfInput.value.replace(/[^\d]+/g, '');
+
+  if (cpf === '') {
+    // CPF em branco, não faz nada
+    return;
+  }
+
+  if (!validarDigitosCPF(cpf)) {
+    // CPF com quantidade incorreta de dígitos
+    exibirErro(cpfInput, 'CPF inválido');
+    return;
+  }
+
+  if (!validarCPFRepetido(cpf)) {
+    // CPF com todos os dígitos repetidos
+    exibirErro(cpfInput, 'CPF inválido');
+    return;
+  }
+
+  // Cálculo dos dígitos verificadores
+  var digito1 = calcularDigitoVerificador(cpf.substring(0, 9));
+  var digito2 = calcularDigitoVerificador(cpf.substring(0, 9) + digito1);
+
+  if (cpf.substring(9, 11) !== digito1.toString() + digito2.toString()) {
+    // CPF com dígitos verificadores inválidos
+    exibirErro(cpfInput, 'CPF inválido');
+    return;
+  }
+
+  // CPF válido, remove o estilo de erro (caso exista)
+  removerErro(cpfInput);
+}
+
+function validarDigitosCPF(cpf) {
+  return cpf.length === 11;
+}
+
+function validarCPFRepetido(cpf) {
+  var cpfRepetido = /^(\d)\1+$/;
+  return !cpfRepetido.test(cpf);
+}
+
+function calcularDigitoVerificador(cpfParcial) {
+  var soma = 0;
+  var peso = 10;
+
+  for (var i = 0; i < cpfParcial.length; i++) {
+    soma += parseInt(cpfParcial[i]) * peso;
+    peso--;
+  }
+
+  var resto = soma % 11;
+  return resto < 2 ? 0 : 11 - resto;
+}
+
+function exibirErro(elemento, mensagem) {
+  elemento.style.borderColor = 'red';
+  elemento.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+  var msgError = document.getElementById('msgError');
+  msgError.innerHTML = mensagem;
+  msgError.style.color = 'red';
+}
+
+function removerErro(elemento) {
+  elemento.style.borderColor = '';
+  elemento.style.backgroundColor = '';
+  var msgError = document.getElementById('msgError');
+  msgError.innerHTML = '';
+}
+
+// Evento para validar o CPF quando o campo perder o foco
+document.getElementById('cpf').addEventListener('blur', validarCPF);
