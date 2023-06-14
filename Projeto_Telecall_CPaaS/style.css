@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Quicksand:wght@300;400;600;700&display=swap');
+body{
+    font-family:  'Quicksand', sans-serif;
+    background-color:#fdfdfd;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*cor vermelho mais forte que foi trocado #770c0c8*/
+
+.logo { text-align: center;
+background-color: #fdfdfd;}
+
+header {
+ background-color: #b41a27;
+box-shadow: 0px 0.5px 5px;
+
+}
+/*menu*/
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 16.8px;
+    align-items: center;
+}
+
+.nav-item{
+    margin: 15px 10px;   
+  
+   
+}
+.nav-link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.nav-link:hover {
+    color: #000000;
+    border-bottom: 4px solid #15486E;
+    font-weight: border;
+
+}
+
+
+/*submenu*/
+.sub-menu{
+    padding: 0;
+    background-color: #f1f1f1;
+    color: #000000;
+}
+.sub-menu:hover{
+    background-color: #000000;
+    color: #EEE;
+}
+.nav-bar .sub-menu{
+    display: none;
+}
+ .nav-bar .sub-menu li:hover > ul{
+    display: block;
+
+
+}
+
+
+
+/********** area cliente*********/
+#area:hover { color: #000000;
+    background-color: #EEE;
+    border-bottom: 10px #15486E; }
+#area{
+    background-color: #15486E;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #EEE;
+    border: 1px solid #0a263c;
+    padding:5px;
+}
+
+/*pro menu sumir*/
+
+.mobile-menu-icon{
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
+
+
+/*vai aparecer só quando a tela tiver essa medida*/
+@media screen and (max-width: 730px){
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block;
+    }
+   
+    .mobile-menu-icon button{
+        background-color: transparent;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu-icon button img{
+        width: 25px;
+        height: 25px;
+       position: relative;
+        margin-top: 0.5%;
+    }
+
+    .mobile-menu ul{
+        display: flex;
+       
+       flex-direction: column;
+        text-align: center;
+        margin-left: 32%;
+    }
+    
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1rem 2rem;
+    }
+ 
+    .open{
+        display: flex;
+    }
+    #area:hover { color: #000000;
+        background-color: #EEE;
+        border-bottom: 10px #15486E; }
+    #area{
+        background-color: #15486E;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #EEE;
+    }
+ 
+ }
+
+
+ /*********BANNER INDEX***********/
+ .banner {
+  font-family: 'Poppins'; 
+ background: transparent
+   url("img/modavo.png")
+   0 0 no-repeat fixed;
+ text-align: center;
+ background-size: cover;
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+
+ height: 400px;
+ width: 100%;
+ margin-bottom: 3em;
+ display: table;
+}
+
+.banner-head {
+ display: table-cell;
+ vertical-align: middle;
+ margin-bottom: 0;
+ font-size: 2em;
+ color: white;
+ font-weight: 400;
+ text-shadow: 0 1px 1px black;
+}
+/**BOTAO INDEX BANNER**/
+.cssbuttons-ioo {
+   text-decoration: none;
+   position: relative;
+   margin-top: 1%;
+   font-size: 15px;
+   letter-spacing: 0.05em;
+   border-radius: 0.8em;
+   border: none;
+   background: linear-gradient(90deg, #15486E 1%, #71C4FFFF 100%);
+   
+   overflow: hidden;
+   }
+   .cssbuttons-ioo span {
+       position: relative;
+       z-index: 10;
+       transition: color 0.4s;
+       display: inline-flex;
+       align-items: center;
+       padding: 0.8em 1.2em 0.8em 1.05em;
+     }
+     
+     .cssbuttons-ioo::before,
+     .cssbuttons-ioo::after {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 0;
+     }
+     
+     .cssbuttons-ioo::before {
+       content: "";
+       background: #15486E;
+   
+       width: 120%;
+       left: -10%;
+       transform: skew(30deg);
+       transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+     }
+     
+     .cssbuttons-ioo:hover::before {transform: translate3d(100%, 0, 0); }
+     
+   .cssbuttons-ioo:active {transform: scale(0.95); }
+     
+button a{
+   text-decoration: none;
+   color: #ffffff;
+
+}
+#icons-servicos{
+width: 70px;
+
+
+}
+
+/*******************8*pq a telecall***********8****/
+
+#pq h4{
+   color: #15486E;
+   font-weight: 600;
+   font-family: 'Poppins';
+   font-size: 30px;
+}
+.p-3{
+   color: #000000;
+}
+
+.col p{
+   color: #000000;
+   text-decoration: underline #15486E;
+   font-weight: 700;
+}
+
+/**************about************/
+ .about-cpaas{
+    text-align: center;
+ }
+.about-cpaas h4{
+    margin-top: 3%;
+    font-weight: 600;
+    font-family: 'Poppins';
+   
+
+}
+
+/****veja como********/
+
+.main-title {
+    color:#ffffff;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+.service-box h4{ color: #FFFFFF;}
+
+.service-box p{color: #ffffff;}
+
+.service-box i{color: #15486E; font-size: 25px;}
+
+/*******************Servicos******************/
+
+
+#serviçosmodavo{
+    border-radius: 41px;
+    background: #ffffff;
+    box-shadow:  16px 16px 32px #b5b5b5,
+             -16px -16px 32px #ffffff;
+             width:350px;
+            
+             height: 270px;
+             display: inline-block;
+             text-align: center;
+    margin: 1% auto;
+    margin-top: 2%;
+}
+
+    
+.row h1{
+    color: #15486E;
+    text-align: center;
+   margin-top: 3%;
+    font-family: 'Poppins'; 
+    font-size: 30px; 
+    font-weight: 600;
+}
+/**BOTAO NOSSOS SERVIÇOS**/
+.cssbuttons-io {
+    text-decoration: none;
+    position: relative;
+    margin-top: 1%;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    border: none;
+    background: linear-gradient(90deg, #15486E 1%, #71C4FFFF 100%);
+    
+    overflow: hidden;
+    }
+    .cssbuttons-io span {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8em 1.2em 0.8em 1.05em;
+      }
+      
+      .cssbuttons-io::before,
+      .cssbuttons-io::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      
+      .cssbuttons-io::before {
+        content: "";
+        background: #15486E;
+    
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+      
+      .cssbuttons-io:hover::before {transform: translate3d(100%, 0, 0); }
+      
+    .cssbuttons-io:active {transform: scale(0.95); }
+      
+button a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+#icons-servicos{
+ width: 70px;
+ 
+
+}
+
+/*******************8*pq a telecall***********8****/
+
+#pq h4{
+    color: #15486E;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+.p-3{
+    color: #000000;
+}
+
+.col p{
+    color: #000000;
+    text-decoration: underline #15486E;
+    font-weight: 700;
+}
+
+/*****quem usa*********/
+.quem-usa h3{
+
+    margin-top: 5%;
+    color: #15486E;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+
+
+/*****************************contato*****************************/
+
+.container h1 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5%;
+  }
+  .container .form {
+    margin-top: 30px;
+    border-radius: 23px;
+background: #fffdfd;
+box-shadow:  25px 25px 100px #dddcdc,
+             -25px -25px 100px #ffffff;
+          width: 100%;
+  }
+  .form .input-box {
+    width: 50%;
+    margin-top: 20px;
+
+  }
+  .input-box label {
+    color: #333;
+  }
+  .form :where(.input-box input, .select-box) {
+    position: center;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #4e0e0e;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+.column textarea{
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+  height: 50px;
+  width: 100%;
+}
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  .form .gender-box {
+    margin-top: 20px;
+  }
+  .gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .gender label {
+    color: #707070;
+  }
+  .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  .form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #b41a27;
+  }
+  .form button:hover {
+    background: rgb(249, 249, 249);
+    color: #000000;
+  }
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+    }
+  
+  }
+
+
+  /******************2FA***********************/
+  .seguranca h5{
+    text-align: center;
+    margin-top: 3%;
+    font-size: 23px;
+   
+}
+.col-sm h3{
+    font-size: 45px;
+    color: rgb(42, 91, 139);
+    font-weight: 500;
+     font-family: 'Poppins';
+     margin-top: 3%;
+
+}
+
+/**beneficos**/
+#beneficios{
+    color: #ffffff;
+    border-radius: 12px;
+    background: #15486E;
+    box-shadow:  5px 5px 10px #bebebe,
+                 -5px -5px 10px #ffffff;
+                
+                 display: inline-block;
+                 text-align: center;
+        margin: 1% auto;
+        margin-top: 2%;
+     
+}
+#beneficios i{
+    color: aqua;
+    font-size: 30px;
+    margin-top: 10%;
+}
+#beneficios h5{
+    margin-top: 5%;
+}
+
+#beneficios {
+  
+    width:320px;
+            
+    height: 230px;
+    animation: go-back 1s;
+  }
+  
+  @keyframes go-back {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  } 
+
+  #ondeusar ul{
+    list-style: none;
+  }
+  #ondeusar h1{
+    font-weight: 600;
+    font-size: 30px;
+    color: #15486E;
+    font-family: 'Poppins';
+  }
+
+  .seguranca h5{
+font-size: 30px;
+font-weight: 600;
+
+  }
+
+
+/**************************NUMERO MASCARA********************/
+/**#funcionamento-number{
+    background-color: #bebebe;
+}**/
+#proteja h3{
+    font-size: 25px;
+    color: rgb(42, 91, 139);
+    font-weight: 500;
+     font-family: 'Poppins';
+     margin-top: 3%;
+
+}
+.oqueoferece h1{text-align: center;}
+.oqueoferece h5{text-align: center; font-weight: 300;}
+
+.podeusar{
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+}
+
+#cor{
+    color: #15486E;
+  
+}
+
+
+
+
+
+/**********FOOTERRR**********/
+.link-secondary i{
+  font-size: 22px;
+
+}
+.link-secondary i:hover{
+  color: #b41a27;
+}

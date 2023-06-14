@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <script src="../scrips/texto.js"> </script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>CPaaS-Telecall-Site Oficial</title>
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/OIP.png" style=" height: 70px "> </a>
+          </div>
+        <nav class="nav-bar">
+          
+
+          <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">Produtos</a>
+               <!-- <li>2FA - Autenticação de dois Fatores</li>
+                <li>Número Máscara</li>
+                <li>Google Verified Calls</li>
+                <li>SMS Programável</li>-->
+              </li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">API</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+
+             </ul>
+        </div>
+<!--só aparece em mobile e dependendo, em ipad também-->
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow ()"><a><img class="icon" src="img/menu.png"></a></button>
+        </div>
+        </nav>   
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Telefonia</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Rede e infraentrutura</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Internet</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Outras soluções</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+            </ul>
+        </div>
+
+    </header>
+    
+    
+        <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col">
+                <a href="#" style=" color: black; cursor: pointer;"><i class="fa-solid fa-phone-volume" style="color: #ca1616; font-size: 25px; margin-top: 30px;"></i> 
+                  +55 21 3030-1010</a>
+            </div>
+             <div class="col">
+                <a href="mailto:suporte@telecall.com?subject=Questions" style=" color: black; cursor: pointer; "><i class="fa-solid fa-envelope" style="color: #ca1616; font-size: 25px; margin-top: 30px;"></i>Email</a>
+             </div>
+            </div>
+          </div>
+    
+
+    <section class="container">
+       <h1>PREENCHA O FORMULÁRIO E ENTRAREMOS EM CONTATO.</h1>
+         <form action="obg.html" class="form" >
+         <div class="input-box">
+            <label>Nome</label>
+              <input type="text" placeholder="Enter full name" required />
+           </div>
+    <div class="input-box">
+      <label>Email </label>
+      <input type="text" placeholder="Enter email address" required />
+    </div>
+    <div class="column">
+      <div class="input-box">
+        <label>Phone Number</label>
+        <input type="number" placeholder="Enter phone number" required />
+      </div>
+    </div>
+    <div class="input-box address">
+      <label>Sua empresa</label>
+      <input type="text" placeholder="Digite o nome da empresa" required />
+      
+      <div class="column">
+        <div class="select-box">
+          <select>
+            <option hidden>Assunto</option>
+            <option>Comercial</option>
+            <option>Suporte técnico</option>
+            <option>Administrativo/Financeiro</option>
+            <option>Outros</option>
+          </select>
+        </div>
+    
+      </div>
+      <div class="column">
+        <textarea placeholder="Mensagem"></textarea>
+      </div>
+    </div>
+    <button type="submit" id="enviar"  onclick="validar()">Enviar</button>
+    </form>
+    </section>
+    
+    
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Conecte-se conosco nas redes sociais:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="img\OIP.png" alt="" style="width: 70%;">
+            <br> CPaaS PLATAFORM
+          </h6>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4"> Serviços</h6>
+          <p>
+            <a href="#!" class="text-reset">2FA - Autenticação de dois Fatores </a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Número Máscara</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Google Verified Calls</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">SMS Programável</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            suporte@telecall.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> +55 21 3030-1010</p>
+      
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://telecall.com/">Telecall.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+       
+       
+       <script src="../scrips/menu.js"> </script>
+       <script src="../scrips/script.js" defer></script>
+           <script src="https://kit.fontawesome.com/6c3bbfdabc.js" crossorigin="anonymous"> </script>
+            <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+       
+ 
+       
+       </body>
+       </html>
+    
+
+       
+       
+       <script src="../scrips/menu.js"> </script>
+           <script src="https://kit.fontawesome.com/6c3bbfdabc.js" crossorigin="anonymous"> </script>
+            <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+       
+       
+       </body>
+       </html>

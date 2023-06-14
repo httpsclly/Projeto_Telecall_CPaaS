@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do cliente - Telecall </title>
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <link rel="stylesheet" type="text/css" href="css-cadastro/style-cadastre_se.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="scrips/validardados.js"></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css
+    " rel="stylesheet">
+
+
+
+</head>
+<body>
+   <main id="container">
+    <div form="row">
+        <form id="login_form" action="">
+            <div id="form_header">
+                <a href="cadastro.html">
+                <i class="fa-solid fa-arrow-left">   
+                </i>
+                </a>
+                <h1>Cadastre-se</h1>
+                <br>
+                <p>Para ser cliente é necessário preencher  corretamente o formulário abaixo. <br> Os campos com * são de preenchimento <strong>obrigatório.</strong></p>
+                <br>
+                <hr>
+            </div> 
+            
+      
+            <div id="input">
+                <div id="input-box ">
+                <label for="Name"> <strong>Nome: *</strong> </label>
+                <div class="input-wrapper">
+                     <input id="Name" type="text" maxlength="15" placeholder="Digite seu nome" name="text" class="input"  >
+              </div>
+            </div>
+            </div>
+
+
+            <div id="input">
+                <div id="input-box ">
+                <label for="Sobrenome"> <strong>Sobrenome: *</strong> </label>
+                <div class="input-wrapper">
+                     <input id="Sobrenome" type="text" maxlength="26" placeholder="Digite seu sobrenome" name="text" class="input"  >
+                  </div>
+                </div>
+                </div>
+
+
+            <div id="input">
+                <div id="input-box">
+                    <label for="Nome_Materno"> <strong>Nome da Mãe: </strong> </label>
+                    <div class="input-wrapper">
+                        <input id="Nome_Materno" type="text" maxlength="29" placeholder="Digite o nome materno" name="text" class="input"  >
+                      </div>
+                </div>
+                    </div>
+
+            <div id="input">
+                <div id="input-box">
+                    <label for="CPF"> <strong>CPF: *</strong> </label>
+                    <div class="input-wrapper">
+                        <input id="CPF" type="text" maxlength="11" placeholder="Digite seu CPF" name="text" class="input" onblur="validarCPF(cpf)">
+                  </div>
+                </div>
+                </div>
+
+
+            <div id="input">
+                 <div id="input-box">
+                    <label for="Data-de-nasci"> <strong>Data de Nascimento: </strong> </label>
+                    <div class="input-wrapper">
+                        <input id="Data-de-nasci" type="date" placeholder="" name="text" class="input"  >
+                    </div>
+                </div>
+            </div>
+              
+            <div id="input">
+                <div id="input-box">            
+                        <label for="cep"><strong>CEP: *</strong></label>
+                        <div class="input-wrapper">
+                        <input type="text" name="cep" placeholder="Digite seu CEP" class="input" id="cep"  onblur="">                    
+                    </div>
+                </div>
+            </div>
+
+            <div id="input">
+                    <div id="input-box">            
+                            <label for="endereco"><strong>Endereço: </strong></label>
+                            <div class="input-wrapper">
+                            <input type="text" class="input" id="endereco" name="rua">
+                        </div>
+                    </div>
+                    </div>
+            
+            <div id="input">    
+                    <div id="input-box">
+                        <label for="bairro"><strong>Bairro: </strong></label><p></p>
+                         <div class="input-wrapper">
+                            <input type="text" class="input" id="bairro" name="bairro">
+                        </div>
+                    </div>
+                </div>
+
+            <div id="input">   
+                    <div class="input-box">
+                        <label for="uf"><strong>Estado: </strong></label><p></p>
+                        <div class="input-wrapper">
+                            <input type="text" class="input" id="uf" name="uf">
+                        </div>
+                    </div>
+                </div>
+
+
+            <div id="input">
+                <div id="input-box">
+                     <label for="sexo"> <strong>Informe seu sexo: </strong> </label> <br>
+	                Homem: <input type="radio" name="sex" /><br />
+	                Mulher: <input type="radio" name="sex" /><br />
+                    Prefiro não dizer: <input type="radio" name="sex" /><br />
+                </div>
+            </div>
+
+
+            <div id="input">
+                <div id="input-box">
+                    <label for="Celular"> <strong>Digite seu celular: *</strong> </label>
+                    <div class="input-wrapper">
+                         <input id="Celular" type="text" placeholder=“(xx)xxxx-xxxx” maxlength="16"  autocomplete=“new-password” inputmode="numeric"  value=(+55) class="input">
+                     </div>
+                </div>
+                 </div>
+
+            
+
+            <div id="input">
+                <div class="input-box">
+                <label for="Telefone"> <strong>Digite seu telefone fixo: *</strong> </label>
+                <div class="input-wrapper">
+                    <input id="Telefone" type="text" placeholder=“(xx)xxxx-xxxx” maxlength="13"  autocomplete=“new-password” inputmode="numeric" value=(+55) class="input">
+                </div>
+                </div>
+            </div>
+
+            <div id="input">
+                <div class="input-box">
+                     <label for="Login"> <strong>Login: *</strong> </label>
+                    </div>
+                <div class="input-wrapper">
+                     <input id="Login" type="text" maxlength="6" placeholder="Digite seu login" name="text" class="input"  >
+                  </div>
+                
+                </div>
+
+                <div id="input">
+                    <div class="input-box">
+                    <label for="Senha"> <strong>Senha: *</strong> </label>
+                    <div class="input-wrapper">
+                         <input id="Senha" type="password" maxlength="8" placeholder="Digite sua senha" name="text" class="input"  >
+                      </div>
+                    </div>
+                </div>
+                
+               
+            <button type="submit" id="login_button" onclick="Login_Vali()">
+                <strong> Entrar </strong>
+            </button>
+            
+    
+    </div>
+        </form>
+   </main>
+        
+</body>
+</html>

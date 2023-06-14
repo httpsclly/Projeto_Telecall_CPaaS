@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <script src="../scrips/texto.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="2fa.css">
+
+
+    <title>CPaaS-Telecall-Site Oficial</title>
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/OIP.png" style=" height: 70px "> </a>
+          </div>
+        <nav class="nav-bar">
+          
+
+          <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">Produtos</a>
+                  <!-- <ul class="sub-menu">
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">2FA</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-linkk">Número Máscara</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">Google Verified Calls</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">SMS Programável</a>
+                    </li>
+                </ul>-->
+              </li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">API</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+
+             </ul>
+        </div>
+<!--só aparece em mobile e dependendo, em ipad também-->
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow ()"><a><img class="icon" src="img/menu.png"></a></button>
+        </div>
+        </nav>   
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Telefonia</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Rede e infraentrutura</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Internet</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Outras soluções</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="banner">
+      <h1 class="banner-head">
+        Two-Factor Authentication<br><br>
+        Fortaleça a estratégia de segurança de seu negócio.
+        <br><br>
+        <button class="cssbuttons-ioo"> <span><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"></path><a href="#comofunciona-dois">Veja mais</a></span></button>
+      </h1>
+    
+    </div>
+    
+ 
+   
+<div class="container">
+  <div class="podeusar">
+    <h1>Two-Factor Authentication</h1>
+    <p>O que é?</p><hr>
+    <p >O 2FA é um procedimento de segurança que garante que serão 
+      necessários 2 fatores únicos para liberação de uma ação.<br>
+      O primeiro fator é a senha que o usuário e o segundo pode ser 
+autenticado via token, via detecção de impressão digital, 
+reconhecimento facial, código enviado via sms, entre outros.
+ <br><span id="cor"> essa ferramenta você envia mensagens de SMS com
+      as informações que o seu cliente precisa e com a
+      segurança, a velocidade e a confiabilidade que você
+      espera</span></p>
+    
+  </div>
+</div>
+<br ><br>
+
+
+
+<div id="services-area" style="background-color: #c32222; opacity: .8;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <h4 class="main-title" style="text-align: center; font-size: 30px;" id="comofunciona-dois">Como funciona</h4>
+      </div>
+      <div class="col-md-4 service-box" style="margin-top: 5px;">
+        <img src="img\telasenhalogin.png" alt="" style="width: 200px;">
+        <p>Usuário acessa seu site o
+          aplicativo e digita a senha
+          cadastrada para entrar em
+          seu perfil ou completar uma
+          transação </p>
+      </div>
+      <div class="col-md-4 service-box">
+        <img src="img\localizacaopin.png" alt="" style="width: 120px; ">
+        <p>A Telecall recebe a tentativa
+          de login e solicita que o
+          usuário insira seu número de
+          telefone para autorizar o
+          acesso. </p>
+      </div>
+      <div class="col-md-4 service-box">
+        <img src="img\telefonepin.png" alt="" style="width: 120px;">
+        <p>Após inserir seu número, a
+        Telecall envia para o usuário
+        por SMS, chamada ou e-mail
+        um código PIN de uso único.
+      </p>
+        <p>Esse código PIN é também 
+          conhecido como OTP (One
+          Time Password).</p>
+      </div>
+      <div class="col-md-4 service-box">
+        <img src="img\pcpin.png" alt="" style="width: 200px;">
+     
+        <p>O usuário insere o código no
+          site ou aplicativo para
+          concluir o processo de
+          verificação.</p>
+      </div>
+      
+    </div>
+   
+  </div>
+</div>
+<div class="seguranca">
+  <h5>Adicionar um número de telefone de recuperação<br>a uma 
+      conta individual pode bloquear até:</h5>
+    </div><br>
+  <div class="container">
+      <div class="row">
+        <div class="col-sm" style="font-size: 25px;">
+          <h3>100%</h3>
+          dos bots automatizados
+        </div>
+        <div class="col-sm"style="font-size: 25px;">
+          <h3>99%</h3>
+          dos ataques de phishing em massa
+        </div>
+        <div class="col-sm" style="font-size: 25px;">
+          <h3>66%</h3>
+          dos ataques direcionados
+        </div>
+      </div>
+    </div>
+  
+<br><br>
+
+
+    <div class="conteiner">
+    <div class="row " >
+        <h1>Benefícios</h1><hr>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5> Ofereça segurança aprimorada para seus clientes.</h5></div>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5> Reduza casos de fraude e invasões e evite o acesso a dados por invasores.</h5></div>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5>  Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail</h5></div><br><br>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5>Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada mesmo quando tiver problema com um deles.</h5></div>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5> API simples e de rápida implementação.</h5></div>
+        <div id="beneficios"><i class="fa-solid fa-building-shield"></i><h5> Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e pesquisar usando diversos critérios de filtro.</h5></div>
+        
+    </div>
+  </div>
+
+
+  <div class="container text-center">
+    <div class="row align-items-center" id="ondeusar">
+      <h1>Onde usar</h1><hr>
+      <div class="col" style="margin-top: 2%;">
+        <i class="fa-solid fa-hand-holding-dollar" style="font-size: 30px;"></i><br> Finanças <br>
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Autenticação para 
+            transações bancárias</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Pagamentos Online 
+            (PicPay, PayPal)</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Digital Wallets (Google 
+            Pay, Apple Pay, 
+            Samsung Pay</li>
+          </ul>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-user-nurse" style="font-size: 30px;"></i><br> Saúde <br>
+        <ul>
+        <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao potal/app</li>
+        <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Agendamentos</li>
+        <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Tokens de autorização</li>
+        <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Telemedicina</li>
+      </ul>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-plane-departure" style="font-size: 30px;"></i><br> Turismo<br>
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao potal/app</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Gestão de Reservas</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao histórico </li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Salvar dados de pagamentos</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Recuperação de Senha</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="container text-center">
+    <div class="row align-items-center" id="ondeusar">
+      <div class="col">
+        <i class="fa-solid fa-bag-shopping" style="font-size: 30px;"></i><br> Varejo<br>
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao potal/app</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Gestão de Reservas</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao histórico </li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Salvar dados de pagamentos</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Recuperação de Senha</li>
+        </ul>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-users-between-lines" style="font-size: 30px;"></i><br> Governo<br>
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao potal/app</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Gestão de Reservas</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Acesso ao histórico </li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Salvar dados de pagamentos</li>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Recuperação de Senha</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+<!--Quem usa-->
+<!--mudar img-->
+<div class="container quem-usa">
+  <h3>QUEM USA </h3><hr>
+
+    <img src="img\quemusa.png" alt="" style="  height: 30%; width: 100%;">
+
+</div>
+
+
+      
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Conecte-se conosco nas redes sociais:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="img\OIP.png" alt="" style="width: 70%;">
+            <br> CPaaS PLATAFORM
+          </h6>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4"> Serviços</h6>
+          <p>
+            <a href="#!" class="text-reset">2FA - Autenticação de dois Fatores </a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Número Máscara</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Google Verified Calls</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">SMS Programável</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            suporte@telecall.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> +55 21 3030-1010</p>
+      
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://telecall.com/">Telecall.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+       
+       <script src="../scrips/menu.js"> </script>
+       <script src="../scrips/script.js" defer></script>
+           <script src="https://kit.fontawesome.com/6c3bbfdabc.js" crossorigin="anonymous"> </script>
+            <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+       
+ 
+       
+
+    
+    </body>
+    </html>

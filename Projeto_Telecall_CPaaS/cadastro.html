@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do cliente - Telecall </title>
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <link rel="stylesheet" type="text/css" href="css-cadastro/style-cadas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <h1>Login</h1>
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left">   
+                </i>
+                </a>    
+            </div>
+
+            <div id="input">
+                <div class="input-box">
+                    <label for="CPF ou CNPJ">
+                        Login
+                        <div class="input-campo">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="CPF ou CNPJ" name="CPF ou CNPJ" maxlength="6"  required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="Senha">
+                        Senha
+                        <div class="input-campo">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="Senha" name="Senha" maxlength="8" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="criar_uma_conta">
+                    <p>Não tem uma conta? <a href="cadastre_se.html">
+                        Cadastre-se
+                    </a></p>
+                
+                </div>
+            </div>
+
+            <button type="submit" id="login_button">
+                Login
+            </button>
+        </form>
+   </main>
+</body>
+</html>

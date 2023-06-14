@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/logo-vermelha.png">
+    <script src="../scrips/texto.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    
+
+
+    <title>CPaaS-Telecall-Site Oficial</title>
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/OIP.png" style=" height: 70px "> </a>
+          </div>
+        <nav class="nav-bar">
+          
+
+          <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">Produtos</a>
+                  <!-- <ul class="sub-menu">
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">2FA</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-linkk">Número Máscara</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">Google Verified Calls</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="sub-menu-link">SMS Programável</a>
+                    </li>
+                </ul>-->
+              </li>
+                <li class="nav-item"><a  class="nav-link" href="telefonia.html">API</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+
+             </ul>
+        </div>
+<!--só aparece em mobile e dependendo, em ipad também-->
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow ()"><a><img class="icon" src="img/menu.png"></a></button>
+        </div>
+        </nav>   
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a  class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Telefonia</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Rede e infraentrutura</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Internet</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#">Outras soluções</a></li>
+                <li class="nav-item"><a  class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item"><a  class="nav-link" id="area" href="cadastro.html"><i class="fa-regular fa-circle-user"></i>Área do cliente</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="banner">
+      <h1 class="banner-head">
+        GOOGLE VERIFIED CALLS<br><br>
+        A Telecall é a primeira operadora de telecom no Brasil <br>a oferecer esse recurso do Google.
+        <br><br>
+        <button class="cssbuttons-ioo"> <span><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"></path><a href="#comofunciona">Veja mais</a></span></button>
+      </h1>
+    
+    </div>
+    
+    <div class="container">
+      <div class="podeusar">
+        <h1>Chamadas Verificadas</h1>
+        <P>o que é?</P><hr>
+        <p id="cor">Esse novo recurso do Google, exclusivo para
+          telefones Android, permite que empresas exibam
+          para o cliente na hora da chamada sua marca,
+          logotipo e até mesmo o motivo da chamada.</p>
+        
+      </div>
+    </div>
+    
+    
+    <div class="funcionamento-dois" id="comofunciona">
+        <h1 style="text-align: center; margin-top: 5%;">Entenda Como funciona</h1><br>
+    </div>
+    <div class="container text-center" >
+        <div class="row align-items-center">
+
+            <div class="col" id="funcionamento-number">
+              <i class="fa-solid fa-headset" style="color: #ad1a1a; font-size: 50px;"></i><br><br>
+             <span>Uma chamada telefônica 
+              de uma empresa assinante 
+              é feita para um cliente 
+              potencial ou existente.</span>
+                
+            </div>
+            <div class="col " >
+               <i class="fa-solid fa-gears" style="color: #ad1a1a; font-size: 50px;"></i><br><br>
+                <span>Em nanossegundos, a 
+                  solicitação é encaminhada 
+                  para a plataforma da Telecall
+                  que processa a chamada e 
+                  adiciona as informações 
+                  verificadas antes de 
+                  encaminhá-la ao destinatário.</span>
+                   
+            </div>
+            <div class="col ">
+              <i class="fa-solid fa-mobile-screen-button" style="color: #ad1a1a; font-size: 50px;"></i><br><br>
+                <span> As informações aparecem 
+                  na tela do celular do 
+                  recipiente que atenderá a 
+                  ligação com uma chamada 
+                  de voz normal.</span>
+            </div>
+            
+      </div>
+    </div>
+<br><br>
+    <div class="oqueoferece">
+      <h1>Compatibilidade</h1><br>
+  <div class="container">
+      <div class="row">
+        <div class="col-sm" id="proteja">
+          <h3>• Pré-instalado em telefones mais recentes ou pode 
+            ser baixado do Google Play Store para a maioria 
+            dos dispositivos com Android 9.0.</h3>
+      
+        </div>
+        <div class="col-sm" id="proteja">
+          <h3>•Exclusivo para sistema operacional Android
+            através do aplicativo Telefone.</h3> 
+         
+        </div>
+      </div>
+    </div>
+    <!--beneficios-->
+    <div class="conteiner">
+    <div class="row " >
+        <h1>Benefícios</h1>
+        <div id="beneficios"><br><h3 style="color:aqua; ">ESTABELEÇA CONFIANÇA</h3><h5>Clientes são mais propensos a atender chamadas de organizações com os quais estão familiarizadas e com as quais já tem relação.</h5></div>
+        <div id="beneficios"><br><h3 style="color:aqua; ">AGILIZA A CONEXÃO</h3><h5>Quando o motivo da chamada é claro, a chance de o cliente atender é muito maior e a conexão com ele mais rápida e eficiente.</h5></div>
+        <div id="beneficios"><br><h4 style="color:aqua; ">MELHORA A CONEXÃO DO CLIENTE</h4><h5>O nome da marca, logotipo e a visualização do motivo da chamada oferecem uma experiencia melhor e muito mais amigável para o cliente</h5></div><br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container text-center" >
+    <div class="row align-items-center" id="ondeusar">
+      <h1>Onde usar</h1><hr>
+      <div class="col">
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Agendamentos de serviços, entregas, reparos e 
+            instalações.</li>
+          </ul>
+      </div>
+      <div class="col">
+         <ul>
+        <li><i class="fa-solid fa-check" style="color: #b22424;"></i>  Aviso de atrasos e cancelamentos de voos.</li>
+       </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i>Aviso de problemas de fraude de cartão de crédito.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i>Avisos sobre agendamentos, exames e resultados</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><i class="fa-solid fa-check" style="color: #b22424;"></i> Oferecer uma melhor experiência de vendas e promoções.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+ <!--Quem usa-->
+ <div class="container quem-usa">
+  <h3>QUEM USA CPaaS</h3><hr>
+
+    <img src="img\quemusa.png" alt="" style="  height: 30%; width: 100%;">
+
+</div>
+      
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Conecte-se conosco nas redes sociais:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="img\OIP.png" alt="" style="width: 70%;">
+            <br> CPaaS PLATAFORM
+          </h6>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4"> Serviços</h6>
+          <p>
+            <a href="#!" class="text-reset">2FA - Autenticação de dois Fatores </a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Número Máscara</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Google Verified Calls</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">SMS Programável</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            suporte@telecall.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> +55 21 3030-1010</p>
+      
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://telecall.com/">Telecall.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+       
+       <script src="../scrips/menu.js"> </script>
+       <script src="../scrips/script.js" defer></script>
+           <script src="https://kit.fontawesome.com/6c3bbfdabc.js" crossorigin="anonymous"> </script>
+            <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+       
+ 
+       
+
+    
+    </body>
+    </html>
