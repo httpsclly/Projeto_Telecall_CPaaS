@@ -4,26 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Área do cliente - Telecall </title>
+
+    <link rel="shortcut icon" href="img\logo-vermelha.png">
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style-cadastre_se.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-
-    <title>Singup</title>
   </head>
+
+  
   <body>
     <div class="container">
       <div class="card">
         <a href="cadastro.html">
         <i class="fa-solid fa-arrow-left"></i>
         </a>
-        <h1>Cadastrar</h1>
-        <p>Para ser cliente é necessário preencher  corretamente o formulário abaixo. <br> Os campos com * são de preenchimento <strong>obrigatório.</strong></p>
+        <h1>Cadastre-se</h1>
+        <p class="text-front">Para ser cliente é necessário preencher  corretamente o formulário abaixo. <br> Os campos com * são de preenchimento <strong>obrigatório.</strong></p>
+        <br>
         <hr>
 
         <div id="msgError"></div>
@@ -36,13 +37,14 @@
 
         <div class="label-float">
           <input type="text" id="nome_m" placeholder=" " required />
-          <label id="labelNome" for="nome_m">Nome Materno: </label>
+          <label id="labelNomeM" for="nome_m">Nome Materno: </label>
         </div>
 
         <div class="label-float">
           <input type="text" id="cpf" placeholder=" " required maxlength="11" />
-          <label id="labelNome" for="cpf" onblur="validarCPF()" O>CPF: *</label>
+          <label id="labelNome" for="cpf" onblur="validarCPF()" >CPF: *</label>
         </div>
+
 
         <div class="label-float">
           <input type="date" id="niver" placeholder="" required />
@@ -57,6 +59,20 @@
                            });
         </script>
 
+        <div class="label-float">
+          <input type="text" id="cep" placeholder=" " required maxlength="8" onblur="buscarEnderecoPorCEP()" />
+          <label id="labelCEP" for="cep">CEP: *</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" id="end" placeholder="" />
+          <label id="labelEnd" for="end" >Logradouro: *</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" id="bairro" placeholder="" />
+          <label id="labelBairro" for="bairro" >Bairro: *</label>
+        </div>
 
         <div class="label-float">
           <input type="text" id="usuario" placeholder=" " required />

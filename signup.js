@@ -6,9 +6,19 @@ let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
 let validNome = false
 
+let nome_m = document.querySelector('#nome_m')
+let labelNomeM = document.querySelector('#labelNomeM')
+let validNomeM = false
+
+
+
 let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = false
+
+let cep = document.querySelector('#cep')
+let labelCEP = document.querySelector('#labelCEP')
+let validCep = false
 
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
@@ -24,26 +34,54 @@ let msgSuccess = document.querySelector('#msgSuccess')
 nome.addEventListener('keyup', () => {
   if(nome.value.length <= 1){
     labelNome.setAttribute('style', 'color: red')
-    labelNome.innerHTML = 'Nome *Insira no minimo 15 caracteres'
+    labelNome.innerHTML = 'Nome Completo: *Insira no minimo 15 caracteres'
     nome.setAttribute('style', 'border-color: red')
     validNome = false
   } else {
     labelNome.setAttribute('style', 'color: green')
-    labelNome.innerHTML = 'Nome'
+    labelNome.innerHTML = 'Nome Completo:'
     nome.setAttribute('style', 'border-color: green')
     validNome = true
+  }
+})
+
+nome_m.addEventListener('keyup', () => {
+  if(nome_m.value.length <= 1){
+    labelNomeM.setAttribute('style', 'color: red')
+    labelNomeM.innerHTML = 'Nome Materno: *Insira no minimo 8 caracteres'
+    nome_m.setAttribute('style', 'border-color: red')
+    validNomeM = false
+  } else {
+    labelNomeM.setAttribute('style', 'color: green')
+    labelNomeM.innerHTML = 'Nome Materno: *'
+    nome_m.setAttribute('style', 'border-color: green')
+    validNomeM = true
+  }
+})
+
+cep.addEventListener('keyup', () => {
+  if(cep.value.length <= 7){
+    labelCEP.setAttribute('style', 'color: red')
+    labelCEP.innerHTML = 'CEP: *Insira no minimo 8 caracteres'
+    cep.setAttribute('style', 'border-color: red')
+    validCEP = false
+  } else {
+    labelCEP.setAttribute('style', 'color: green')
+    labelCEP.innerHTML = 'CEP:'
+    cep.setAttribute('style', 'border-color: green')
+    validCEP = true
   }
 })
 
 usuario.addEventListener('keyup', () => {
   if(usuario.value.length <= 7){
     labelUsuario.setAttribute('style', 'color: red')
-    labelUsuario.innerHTML = 'Usuário *Insira no minimo 6 caracteres'
+    labelUsuario.innerHTML = 'Usuário: *Insira no minimo 6 caracteres'
     usuario.setAttribute('style', 'border-color: red')
     validUsuario = false
   } else {
     labelUsuario.setAttribute('style', 'color: green')
-    labelUsuario.innerHTML = 'Usuário'
+    labelUsuario.innerHTML = 'Usuário:'
     usuario.setAttribute('style', 'border-color: green')
     validUsuario = true
   }
@@ -52,12 +90,12 @@ usuario.addEventListener('keyup', () => {
 senha.addEventListener('keyup', () => {
   if(senha.value.length <= 9){
     labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha *Insira no minimo 8 caracteres'
+    labelSenha.innerHTML = 'Senha: *Insira no minimo 8 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {
     labelSenha.setAttribute('style', 'color: green')
-    labelSenha.innerHTML = 'Senha'
+    labelSenha.innerHTML = 'Senha:'
     senha.setAttribute('style', 'border-color: green')
     validSenha = true
   }
@@ -66,12 +104,12 @@ senha.addEventListener('keyup', () => {
 confirmSenha.addEventListener('keyup', () => {
   if(senha.value != confirmSenha.value){
     labelConfirmSenha.setAttribute('style', 'color: red')
-    labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem'
+    labelConfirmSenha.innerHTML = 'Confirmar Senha: *As senhas não conferem'
     confirmSenha.setAttribute('style', 'border-color: red')
     validConfirmSenha = false
   } else {
     labelConfirmSenha.setAttribute('style', 'color: green')
-    labelConfirmSenha.innerHTML = 'Confirmar Senha'
+    labelConfirmSenha.innerHTML = 'Confirmar Senha:'
     confirmSenha.setAttribute('style', 'border-color: green')
     validConfirmSenha = true
   }
@@ -98,7 +136,7 @@ function cadastrar(){
     msgError.innerHTML = ''
     
     setTimeout(()=>{
-        window.location.href = '../html/signin.html'
+        window.location.href = 'cadastro.html'
     }, 3000)
   
     
@@ -192,7 +230,6 @@ function calcularDigitoVerificador(cpfParcial) {
 
 function exibirErro(elemento, mensagem) {
   elemento.style.borderColor = 'red';
-  elemento.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
   var msgError = document.getElementById('msgError');
   msgError.innerHTML = mensagem;
   msgError.style.color = 'red';
@@ -207,3 +244,31 @@ function removerErro(elemento) {
 
 // Evento para validar o CPF quando o campo perder o foco
 document.getElementById('cpf').addEventListener('blur', validarCPF);
+
+
+// CEP //
+ 
+
+function buscarEnderecoPorCEP() {
+  var cep = document.getElementById('cep').value;
+  var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+
+  fetch(url)
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Erro ao buscar endereço');
+      }
+      return response.json();
+    })
+    .then(function(data) {
+      if (data.erro) {
+        console.error('CEP não encontrado');
+      } else {
+        document.getElementById('end').value = data.logradouro;
+        document.getElementById('bairro').value = data.bairro;
+      }
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+}
