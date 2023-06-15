@@ -41,7 +41,7 @@
         </div>
 
         <div class="label-float">
-          <input type="text" id="cpf" placeholder=" " required maxlength="11" />
+          <input type="text" id="cpf" placeholder=" " required maxlength="11" inputmode="numeric" />
           <label id="labelNome" for="cpf" onblur="validarCPF()" >CPF: *</label>
         </div>
 
@@ -58,9 +58,24 @@
                 dateFormat: "d/m/Y",
                            });
         </script>
+      
+      <div class="label-float">
+      Informe seu Gênero:
+        <select id="genero" required>
+          <option value="" hidden>Escolha seu Gênero.</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outros</option>
+        </select>
+      </div>
+      
+      <div class="label-float">
+        <input type="text" id="Celular" placeholder=" " required inputmode="numeric" onblur="validarCelular()" maxlength="11"/>
+        <label id="labelNome" for="Celular">Celular: *</label>
+      </div>
 
         <div class="label-float">
-          <input type="text" id="cep" placeholder=" " required maxlength="8" onblur="buscarEnderecoPorCEP()" />
+          <input type="text" id="cep" placeholder=" " required maxlength="8" inputmode="numeric" onblur="buscarEnderecoPorCEP()" />
           <label id="labelCEP" for="cep">CEP: *</label>
         </div>
 

@@ -272,3 +272,17 @@ function buscarEnderecoPorCEP() {
       console.error(error);
     });
 }
+
+function validarCelular() {
+  const celularInput = document.getElementById('Celular');
+  const celular = celularInput.value.trim();
+
+  // Verifica se o celular possui 11 dígitos numéricos
+  const regex = /^\d{11}$/;
+  if (!regex.test(celular)) {
+    celularInput.setCustomValidity('Informe um número de celular válido com 11 dígitos.');
+  } else {
+    celularInput.setCustomValidity('');
+  }
+}
+

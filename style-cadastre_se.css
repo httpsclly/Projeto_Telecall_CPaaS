@@ -20,9 +20,14 @@ i {
 }
 
 hr {
+  align-items: center;
   border: 0;
   border-bottom: 1px dashed #000000;
   background: #999;
+}
+
+.linha {
+  text-align: center;
 }
 
 .container {
@@ -40,7 +45,7 @@ hr {
   padding: 60px;
   border-radius: 9%;
   width: 400px;
-  border-radius: 50px;
+  border-radius: 59px;
   background: #fffcfc;
   box-shadow: 5px 5px 10px rgb(309, 199, 199);
 }
@@ -143,4 +148,3 @@ button:hover{
   border-radius: 4px;
   display: none;
 }
-
